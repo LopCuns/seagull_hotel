@@ -1,0 +1,266 @@
+// CSS RESET
+*,::after,::before
+  box-sizing: border-box
+body
+  width: 100%
+  min-height: 100vh
+  margin: 0
+h1,h2,h3,h4,h5,h6
+  margin: 0
+button
+  border: none
+  background: none
+a
+  text-decoration: none
+  color: inherit
+  font: inherit
+ul
+  margin: 0
+  padding: 0
+li
+  list-style: none
+img
+  max-width: 100%
+// VARIABLES
+// COLORS
+$color-main: #8dd
+$color-dark: #3bc
+$color-light: #a7e7e7
+$color-ultra-light: transparentize($color-light,.8)
+$color-white: #fff
+$color-black: #000
+$color-text: #777
+$color-text-b: #444
+$color-text-l: #999
+// Z-INDEX
+$z-0: 0
+$z-1: 10
+$z-2: 20
+$z-3: 30
+$z-n: -1
+// SIZES
+$s-icon: 1.5rem
+$s-desktop: 1280px
+// FONT-SIZE
+$fs-title: min(3em,7vw)
+$fs-subtitle: min(1.5em,4.5vw)
+$fs-xxl: 2em
+$fs-xl: 1.5em
+$fs-big: 1.2rem
+// FONT-FAMILY
+$fm-main: Arial, Helvetica, sans-serif
+$fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+// UTILITY CLASSES
+.no-scroll
+  overflow: hidden
+.blurred
+  filter: blur(5px)
+.title
+  font:
+    size: $fs-title
+    family: $fm-fancy
+  color: $color-text-b
+.text-normal
+  font-family: $fm-main
+  color: $color-text
+.text-highlight
+  font:
+    family: $fm-fancy
+    weight: bold
+    style: italic
+  text-transform: uppercase
+  color: $color-text-b
+.icon
+  display: inline-block
+  width: $s-icon
+  height: $s-icon
+.logo
+  display: inline-block
+  width: 7rem 
+.book-btn
+  $bar-width: 2px
+  $bar-color: $color-dark
+  $bar-transition: transform .3s ease
+  position: relative
+  padding: .5rem 1rem
+  border-radius: 5px
+  background: $color-dark
+  font-size: $fs-xl
+  color: $color-white
+  cursor: pointer
+  &:hover
+    background-color: $color-light
+  &:hover::after
+    transform: scaleY(1) translateX(10px)
+  &:hover::before
+    transform: scaleY(1) translateX(-10px)
+  &::after
+    content:''
+    position: absolute
+    top: 0
+    right: 0
+    width: $bar-width
+    height: 100%
+    background-color: $bar-color
+    transform: scaleY(0)
+    transition: $bar-transition
+  &::before
+    content:''
+    position: absolute
+    top: 0
+    left: 0
+    width: $bar-width
+    height: 100%
+    background-color: $bar-color
+    transform: scaleY(0)
+    transition: $bar-transition
+.rounded
+  border-radius: 10px
+.hidden
+  display: none
+.menu-item
+  position: relative
+  padding: .5rem 1rem
+  overflow: hidden
+  transition: color .2s ease, transform .2s
+  &::after
+    content:''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transform: translateX(-100%)
+    background-color: $color-dark
+    transition: transform .2s ease
+    z-index: $z-n
+  &:hover
+    color: $color-white
+    transform: scale(1.2)
+  &:hover::after
+    transform: translateX(0)
+// MIXINS
+@mixin flex($direction:row,$wrap:wrap,$justify:center,$align: center)
+  display: flex
+  flex-flow: $direction $wrap
+  justify-content: $justify
+  align-items: $align
+
+
+// HEADER STYLES ( header will be displayed in every page)
+.header
+  $h-height: 4rem
+  position: fixed
+  top:0
+  width: 100%
+  height: $h-height
+  background: linear-gradient(to bottom,$color-light, transparentize($color-light,.2), transparentize($color-light, .4),transparent)
+  z-index: $z-1
+  &__top
+    @include flex(row,wrap,space-between,center)
+    height: $h-height
+    padding: 0 1rem
+  &__content
+    @include flex(column,wrap,space-between,center)
+    position: absolute
+    left: 0
+    top: 0
+    width: 70%
+    height: 100vh
+    background-color: $color-ultra-light
+    transition: transform .5s ease
+    &.hidden
+      transform: translateX(-100%)
+  &__side
+    width: 100%
+    &__ul
+      width: 100%
+      @include flex($direction: row)
+      margin-top: 1rem
+      &__li
+        flex: 1 1 0
+        text-align: center
+        &__btn
+          font:
+            size: $fs-big
+            family: $fm-main
+.navbar
+  width: 100%
+  margin-top: 5rem
+  &__ul
+    @include flex(column,wrap,center,flex-start)
+    gap: 1rem
+    width: 100%
+    padding-left: .5rem
+    &__li
+      font:
+        family: $fm-fancy
+        size: $fs-xxl
+  
+.openmenu
+  $w-size: 3rem
+  $bar-height: 3px
+  @include flex(column)
+  width: $w-size
+  height: $w-size
+  &__bar
+    width: 100%
+    height: $bar-height
+    background-color: $color-black
+    transition: transform .5s ease
+  &__bar:nth-child(2)
+    transform: scaleX(50%)
+    margin:
+      top: calc($bar-height * 4)
+      left: 50%
+  &.open
+    justify-content: center
+  &.open > &__bar:nth-child(1)
+    transform: rotate(45deg)
+  &.open > &__bar:nth-child(2)
+    margin: 0
+    transform: rotate(-45deg) translateY(-$bar-height) scaleX(100%)
+
+// SECTION-SEPARATOR STYLES (futuramente será un web component)
+
+.section-separator
+  @include flex()
+  width: 100%
+  padding: 1rem
+  gap: 1rem
+  &__bar
+    flex: 1 1 0
+    height:3px
+    background-color: #000
+
+// DESKTOP STYLES
+
+@media screen and (min-width: $s-desktop)
+  .header
+    @include flex($justify: space-between)
+    &__content
+      background: none
+      height: auto
+      position: static
+      flex-direction: row
+      &.hidden
+        transform: none
+    &__side
+      @include flex()
+      gap: 1rem
+      width: auto
+      &__ul
+        width: auto
+        gap: 1rem
+        &__li
+          flex-grow: 0
+  .navbar
+    width: auto
+    margin: 0
+    &__ul
+      flex-direction: row
+      &__li
+        font-size: 1em
+  .openmenu
+    display: none
+    

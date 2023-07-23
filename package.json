@@ -1,0 +1,17 @@
+{
+  "name": "seagull-hotel",
+  "version": "1.0.0",
+  "description": "Seagull hotel",
+  "main": "common.js",
+  "scripts": {
+    "lint": "eslint public/scripts/**/*.js --fix",
+    "prettier": "prettier --write .",
+    "correct": "npm run prettier & npm run lint"
+  },
+  "author": "LopCuns",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "3.0.0",
+    "standard": "17.1.0"
+  }
+}

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/seagull_icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/seagull_icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/seagull_icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="public/styles/index.css" />
+    <title>Seagull hotel</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <img
+          src="/assets/logo/seagull_logo.webp"
+          alt="logo"
+          class="header__logo logo"
+        />
+        <div class="openmenu" id="openmenu">
+          <div class="openmenu__bar"></div>
+          <div class="openmenu__bar"></div>
+        </div>
+      </div>
+      <div class="header__content hidden" id="headerContent">
+        <nav class="navbar">
+          <ul class="navbar__ul">
+            <li class="navbar__ul__li menu-item">
+              <a href="#" class="navbar__ul__li__a">Habitaciones</a>
+            </li>
+            <li class="navbar__ul__li menu-item">
+              <a href="#" class="navbar__ul__li__a">Instalaciones</a>
+            </li>
+            <li class="navbar__ul__li menu-item">
+              <a href="#" class="navbar__ul__li__a">Restaurante</a>
+            </li>
+            <li class="navbar__ul__li menu-item">
+              <a href="#" class="navbar__ul__li__a">Spa</a>
+            </li>
+            <li class="navbar__ul__li menu-item">
+              <a href="#" class="navbar__ul__li__a">Eventos</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__side">
+          <ul class="header__side__ul">
+            <li class="header__side__ul__li">
+              <a href="#" class="header__side__ul__li__a icon">
+                <img src="/assets/media/whatsapp.webp" alt="whatsapp" />
+              </a>
+            </li>
+            <li class="header__side__ul__li">
+              <a href="#" class="header__side__ul__li__a icon">
+                <img src="/assets/media/gmail.webp" alt="email" />
+              </a>
+            </li>
+            <li class="header__side__ul__li">
+              <a href="#" class="header__side__ul__li__a icon">
+                <img src="/assets/media/instagram.webp" alt="ingstagram" />
+              </a>
+            </li>
+          </ul>
+          <ul class="header__side__ul">
+            <li class="header__side__ul__li">
+              <button class="header__side__ul__li__btn" data-langselection="es">
+                ES
+              </button>
+            </li>
+            <li class="header__side__ul__li">
+              <button class="header__side__ul__li__btn" data-langselection="en">
+                EN
+              </button>
+            </li>
+            <li class="header__side__ul__li">
+              <button class="header__side__ul__li__btn" data-langselection="fr">
+                FR
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    
+    <main class="main" id="main">
+      <section class="herovid">
+        <video
+          src="assets/herovideo.mp4"
+          loop
+          autoplay
+          muted
+          class="herovid__video"
+        ></video>
+        <header class="herovid__text">
+          <h1 class="herovid__text__title">Siéntete como en casa</h1>
+          <p class="herovid__text__subtitle">Libre como una gaviota</p>
+        </header>
+      </section>
+      <div class="main__sections">
+        <div class="section-separator">
+          <!-- FUTURAMENTE SERÁ UN WEB COMPONENT -->
+          <div class="section-separator__bar"></div>
+          <img
+            src="/assets/logo/seagull__symbol.webp"
+            alt="seagull"
+            class="section-separator__img icon"
+          />
+          <div class="section-separator__bar"></div>
+        </div>
+        <section
+          class="main__section intro-section"
+          data-img="/assets/main/intro-image.webp"
+        >
+          <div class="main__section__content">
+            <h2 class="main__section__content__title title">Seagull hotel</h2>
+            <p class="main__section__content__desc text-normal">
+              29 años en el sector haciendo que tus vacaciones sean
+              <b class="text-highlight">inolvidables</b>.Suits,familiares y
+              habitaciones adaptadas para hacer que tus vacaciones se ajusten a
+              ti.Nuestro restaurante ofrece una amplia variedad de menús para
+              que puedas reponer energías durante tu estancia.<b
+                class="text-highlight"
+                >Piscinas</b
+              >
+              y <b class="text-highlight">jacuzzis</b> favorecen tu relax y
+              nuestro <b class="text-highlight">gimnasio</b> te permite
+              permanecer en buena forma incluso cuando estas de vacaciones.
+            </p>
+          </div>
+          <img
+            src="/assets/main/intro-image.jpg"
+            alt="section image"
+            class="main__section__img"
+          />
+        </section>
+        <div class="section-separator">
+          <!-- FUTURAMENTE SERÁ UN WEB COMPONENT -->
+          <div class="section-separator__bar"></div>
+          <img
+            src="/assets/logo/seagull__symbol.webp"
+            alt="seagull"
+            class="section-separator__img icon"
+          />
+          <div class="section-separator__bar"></div>
+        </div>
+        <section
+          class="main__section awards-section"
+          data-img="/assets/main/awards-image.jpg"
+        >
+          <div class="main__section__content">
+            <h2 class="main__section__content__title title">
+              Grandes valoraciones
+            </h2>
+            <p class="main__section__content__desc text-normal">
+              Además de ser reconocidos como hotel
+              <b class="text-highlight">5 estrellas</b> y gozar de una
+              <b class="text-highlight">valoración media de 9.78</b> en las
+              mejores páginas de hoteles, tenemos también el privilegio de ser
+              el MEJOR HOTEL/SPA de la zona.
+            </p>
+          </div>
+          <img
+            src="/assets/main/awards-image.webp"
+            alt="section image"
+            class="main__section__img"
+          />
+        </section>
+        <div class="section-separator">
+          <!-- FUTURAMENTE SERÁ UN WEB COMPONENT -->
+          <div class="section-separator__bar"></div>
+          <img
+            src="/assets/logo/seagull__symbol.webp"
+            alt="seagull"
+            class="section-separator__img icon"
+          />
+          <div class="section-separator__bar"></div>
+        </div>
+        <section
+          class="main__section location-section"
+          data-img="/assets/main/location-image.jpg"
+        >
+          <div class="main__section__content">
+            <h2 class="main__section__content__title title">
+              Paisajes de ensueño
+            </h2>
+            <p class="main__section__content__desc text-normal">
+              Disfruta de tus vacaciones echándo la vista al mar en las tumbonas
+              exteriores o contempla los atardeceres al final del día.
+            </p>
+          </div>
+          <img
+            src="/assets/main/location-image.webp"
+            alt="section image"
+            class="main__section__img"
+          />
+        </section>
+      </div>
+      <button class="main__book book-btn">RESERVA YA</button>
+    </main>
+
+    <footer class="footer" id="footer">
+      <ul class="footer__media">
+        <li class="footer__media__platform">
+          <a href="#" class="footer__media__platform__a">
+            <img src="/assets/media/gmail.webp" alt="email" class="icon" />
+          </a>
+        </li>
+        <li class="footer__media__platform">
+          <a href="#" class="footer__media__platform__a">
+            <img src="/assets/media/github.webp" alt="github" class="icon" />
+          </a>
+        </li>
+      </ul>
+      <img
+        class="footer__logo logo"
+        src="/assets/logo/seagull_logo.webp"
+        alt="logo"
+      />
+    </footer>
+    <script src="public/scripts/index.js" type="module"></script>
+  </body>
+</html>

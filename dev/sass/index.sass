@@ -1,0 +1,73 @@
+@use 'common'
+
+// HERO VIDEO STYLES
+$desktop-herovid-height:100vh
+$mobile-herovid-height: 20rem
+.herovid
+  @include common.flex()
+  position: relative
+  height: $mobile-herovid-height
+  &__video
+    position: absolute
+    top: 0
+    width: 100%
+    height: $mobile-herovid-height
+    object-fit: cover
+    z-index: common.$z-n
+  &__text
+    text-align: center
+    font:
+      weight: bold
+      family: common.$fm-main
+    color: common.$color-white
+    text-shadow: 2px 0px 2px #000
+    &__title
+      font-size: common.$fs-title
+    &__subtitle
+      font-size: common.$fs-subtitle
+  
+    
+// MAIN SECTIONS STYLES
+.main__sections
+  @include common.flex(column)
+  gap: 1rem
+.main__section
+  width: 100%
+  background-color: common.$color-ultra-light
+  &__content
+    @include common.flex(column)
+    &__desc
+      padding: 2rem
+      text-align: justify
+      line-height: 2em
+  &__img
+    width: 100%
+.main__book
+  display: block
+  margin: 5rem auto
+// FOOTER STYLES
+.footer
+  @include common.flex($justify: space-around)
+  margin-top: 5rem
+  padding: 2rem
+  background-color: common.$color-ultra-light
+  &__media
+    @include common.flex()
+    gap: 1rem
+
+// DESKTOP STYLES
+
+@media screen and (min-width: common.$s-desktop)
+  .herovid, .herovid__video
+    height: $desktop-herovid-height
+  .main
+    &__section
+      @include common.flex()
+      &__content
+        flex: 1 1 0
+      &__img
+        display: inline-block
+        flex: 1.2 1 0
+        width: 60%
+      &:nth-of-type(even) > &__img
+        order: -1

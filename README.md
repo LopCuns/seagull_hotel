@@ -42,3 +42,43 @@ ES :
   - Whatsapp
   - Email 
   - Redes sociales
+
+EN: 
+- Main page
+  - Header
+    - Hotel logo
+    - Navbar with links to each page
+  - Background video/picture with text in the foreground
+  - Descriptive sections
+    - Introduction
+    - Awards
+    - Location
+- Rooms
+  - Suit
+  - Family
+  - Dúplex
+  - Adapted
+- Facilities
+  - Gym
+  - Paddle court
+  - Swimming pool
+  - Cantine
+- Language
+  - Spanish
+  - English
+  - French
+- Restaurant
+  - Menu
+  - Schedules
+  - Combos
+  - Wines	
+- Spa
+  - Treatments
+  - Massage
+- Events
+  - Business
+  - Concerts
+- Contact
+  - Whatsapp
+  - Email 
+  - Social media

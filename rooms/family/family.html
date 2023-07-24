@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las vacaciones en familia nunca han sido tan fáciles de organizar hasta la llegada de Seagull hotel.LLegamos al rescate, ofreciéndoos nuestras habitaciones familiares para que todos podáis tener las MEJORES VACACIONES.">
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/assets/seagull_icon/apple-touch-icon.png"
+  >
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/assets/seagull_icon/favicon-32x32.png"
+  >
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/assets/seagull_icon/favicon-16x16.png"
+  >
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="../public/styles/room.css">
+  <title>Familiares</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__top">
+      <img
+        src="/assets/logo/seagull_logo.webp"
+        alt="logo"
+        class="header__logo logo"
+      >
+      <div class="openmenu" id="openmenu">
+        <div class="openmenu__bar"></div>
+        <div class="openmenu__bar"></div>
+      </div>
+    </div>
+    <div class="header__content hidden" id="headerContent">
+      <nav class="navbar">
+        <ul class="navbar__ul">
+          <li class="navbar__ul__li menu-item">
+            <a href="/index.html" class="navbar__ul__li__a">Página principal</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
+            <a href="../rooms-home.html" class="navbar__ul__li__a">Otas habitaciones</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
+            <a href="#" class="navbar__ul__li__a">Instalaciones</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
+            <a href="#" class="navbar__ul__li__a">Restaurante</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
+            <a href="#" class="navbar__ul__li__a">Spa</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
+            <a href="#" class="navbar__ul__li__a">Eventos</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__side">
+        <ul class="header__side__ul">
+          <li class="header__side__ul__li">
+            <a href="#" class="header__side__ul__li__a icon">
+              <img src="/assets/media/whatsapp.webp" alt="whatsapp">
+            </a>
+          </li>
+          <li class="header__side__ul__li">
+            <a href="#" class="header__side__ul__li__a icon">
+              <img src="/assets/media/gmail.webp" alt="email">
+            </a>
+          </li>
+          <li class="header__side__ul__li">
+            <a href="#" class="header__side__ul__li__a icon">
+              <img src="/assets/media/instagram.webp" alt="ingstagram">
+            </a>
+          </li>
+        </ul>
+        <ul class="header__side__ul">
+          <li class="header__side__ul__li">
+            <button class="header__side__ul__li__btn" data-langselection="es">
+              ES
+            </button>
+          </li>
+          <li class="header__side__ul__li">
+            <button class="header__side__ul__li__btn" data-langselection="en">
+              EN
+            </button>
+          </li>
+          <li class="header__side__ul__li">
+            <button class="header__side__ul__li__btn" data-langselection="fr">
+              FR
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="main" id="main">
+    <h1 class="title main__title">Nuestras habitaciones familiares</h1>
+    <div class="section-separator">
+      <div class="section-separator__bar"></div>
+      <img
+        src="/assets/logo/seagull__symbol.webp"
+        alt="seagull"
+        class="section-separator__img icon"
+      >
+      <div class="section-separator__bar"></div>
+    </div>
+    <section class="main__intro">
+      <h2 class="main__intro__title section-title">¿Cómo son por dentro?</h2>
+      <div class="main__intro__img-wrapper">
+        <img class="main__intro__img" src="./assets/family.webp" alt="family room">
+        <img class="main__intro__img" src="./assets/family-kitchen.webp" alt="family kitchen">
+      </div>
+    </section>
+    <div class="section-separator">
+      <div class="section-separator__bar"></div>
+      <img
+        src="/assets/logo/seagull__symbol.webp"
+        alt="seagull"
+        class="section-separator__img icon"
+      >
+      <div class="section-separator__bar"></div>
+    </div>
+    <section class="main__offers">
+      <h2 class="main__offers__title section-title">Elije la que más te guste</h2>
+      <div class="main__offers__show" id="show">
+        <img src="./assets/family-mountain.webp" alt="suite show" class="main__offers__show__img" id="showImg">
+        <div class="main__offers__show__selection" id="showSelection">
+          <div class="main__offers__show__selection__option-wrapper">
+            <p data-img="./assets/family-mountain.webp" class="main__offers__show__selection__option show-option highlight">Family mountain</p>
+            <img src="./assets/family-mountain.webp" alt="classical suite" class="main__offers__show__selection__option-img">
+          </div>
+          <div class="main__offers__show__selection__option-wrapper">
+            <p data-img="./assets/family-ocean.webp" class="main__offers__show__selection__option show-option">Family ocean</p>
+            <img src="./assets/family-ocean.webp" alt="couple suite" class="main__offers__show__selection__option-img">
+          </div>
+          <div class="main__offers__show__selection__option-wrapper">
+            <p data-img="./assets/family-relax.webp" class="main__offers__show__selection__option show-option">Family relax</p>
+            <img src="./assets/family-relax.webp" alt="library suite" class="main__offers__show__selection__option-img">
+          </div>
+          <div class="main__offers__show__selection__option-wrapper">
+            <p data-img="./assets/family-pool.webp" class="main__offers__show__selection__option show-option">Family pool</p>
+            <img src="./assets/family-pool.webp" alt="business suite" class="main__offers__show__selection__option-img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="footer">
+    <ul class="footer__media">
+      <li class="footer__media__platform">
+        <a href="#" class="footer__media__platform__a">
+          <img src="/assets/media/gmail.webp" alt="email" class="icon">
+        </a>
+      </li>
+      <li class="footer__media__platform">
+        <a href="#" class="footer__media__platform__a">
+          <img src="/assets/media/github.webp" alt="github" class="icon">
+        </a>
+      </li>
+    </ul>
+    <img
+      class="footer__logo logo"
+      src="/assets/logo/seagull_logo.webp"
+      alt="logo"
+  >
+  </footer>
+  <script src="../public/scripts/rooms.js" type="module"></script>
+</body>
+</html>

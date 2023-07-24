@@ -42,10 +42,10 @@ $z-n: -1
 $s-icon: 1.5rem
 $s-desktop: 1280px
 // FONT-SIZE
-$fs-title: min(3em,7vw)
-$fs-subtitle: min(1.5em,4.5vw)
-$fs-xxl: 2em
-$fs-xl: 1.5em
+$fs-title: min(3rem,7vw)
+$fs-subtitle: min(1.5rem,4.5vw)
+$fs-xxl: 2rem
+$fs-xl: 1.5rem
 $fs-big: 1.2rem
 // FONT-FAMILY
 $fm-main: Arial, Helvetica, sans-serif
@@ -60,6 +60,12 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     size: $fs-title
     family: $fm-fancy
   color: $color-text-b
+.section-title
+  font:
+    family: $fm-fancy
+    size: $fs-xl
+  color: $color-text-b
+  text-align: center
 .text-normal
   font-family: $fm-main
   color: $color-text
@@ -195,7 +201,7 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     &__li
       font:
         family: $fm-fancy
-        size: $fs-xxl
+        size: 1.5rem
   
 .openmenu
   $w-size: 3rem
@@ -220,6 +226,16 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   &.open > &__bar:nth-child(2)
     margin: 0
     transform: rotate(-45deg) translateY(-$bar-height) scaleX(100%)
+
+// FOOTER STYLES
+.footer
+  @include flex($justify: space-around)
+  margin-top: 5rem
+  padding: 2rem
+  background-color: $color-ultra-light
+  &__media
+    @include flex()
+    gap: 1rem
 
 // SECTION-SEPARATOR STYLES (futuramente será un web component)
 

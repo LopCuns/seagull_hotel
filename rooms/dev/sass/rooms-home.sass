@@ -1,0 +1,49 @@
+@use '../../../dev/sass/common'
+
+body
+  background-color: common.$color-ultra-light
+.main
+  margin-top: 5rem
+  &__title
+    text-align: center
+.rooms
+  $spacing : 1rem
+  @include common.flex(row)
+  gap: $spacing
+  width: 100%
+  padding: $spacing
+  &__title
+    width: 100%
+  &__type
+    @include common.flex(column)
+    gap: $spacing
+    padding: $spacing
+    &__content
+      @include common.flex(column)
+      flex: 1 1 0
+      gap: $spacing
+    &__desc
+      padding: 0 1rem
+    &__name
+      font: 
+        family: common.$fm-fancy
+        size: common.$fs-xl
+      text-align: center
+    &__img
+      width: max(30vw,20rem)
+@media screen and (min-width: 1000px)
+  .rooms__type
+    width: 100%
+    flex-direction: row
+    &:nth-of-type(odd)
+      justify-content: flex-start
+    &:nth-of-type(even)
+      justify-content: flex-end
+    &__img
+      order: -1
+      width: 50%
+    &:nth-of-type(even) > &__img
+      order: 10
+    &__desc
+      padding: 0 10vw
+      

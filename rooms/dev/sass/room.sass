@@ -1,0 +1,60 @@
+@use '../../../dev/sass/common'
+:root
+  --selection_transform: 0px
+.main
+  $spacing: 2rem
+  width: 100%
+  margin-top: 7rem
+  &__title
+    text-align: center
+  &__intro
+    background-color: common.$color-ultra-light
+    padding: $spacing
+    &__img-wrapper
+      @include common.flex()
+      gap: 1rem
+      margin-top: $spacing
+    &__img
+      flex: 1 1 0
+      height: 20rem
+      object-fit: cover 
+  &__offers
+    @include common.flex(column)
+    padding-top: $spacing
+    background-color: common.$color-ultra-light
+    &__title
+      margin-bottom: 2rem
+    &__show
+      position: relative
+      overflow: hidden
+      &__img
+        display: none
+        width: 50rem
+        height: 70vh
+        object-fit: cover
+      &__selection
+        @include common.flex($direction: column,$justify: space-between)
+        position: static
+        top: 0
+        right: 2rem
+        height: 100%
+        padding: $spacing
+        text-align: center
+        &__option
+          font:
+            family: common.$fm-fancy
+            size: common.$fs-xxl
+          color: common.$color-text-l
+@media screen and (min-width: common.$s-desktop)
+  .main__offers__show__img
+    display: block
+  .main__offers__show__selection
+    position: absolute
+    transform: translateY(var(--selection_transform))
+  .main__offers__show__selection__option-img
+    display: none
+  .show-option
+    transition: transform .3s , color .3s
+  .show-option.highlight
+    transform: scale(1.2)
+    color: common.$color-white

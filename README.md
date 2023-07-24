@@ -1,9 +1,12 @@
 # Seagull hotel webpage
+
 ES : Página web de Seagull hotel (empresa ficticia) elaborada con HTML,CSS,SASS y JAVASCRIPT con fines educativos
 EN: Webpage of Seagull hotel (fictitious enterprise) built with HTML,CSS,SASS and JAVASCRIPT for educational purposes
 
 # Estructura / Structure
-ES : 
+
+ES :
+
 - Página principal
   - Header
     - Logo del hotel
@@ -14,7 +17,7 @@ ES :
     - Premios
     - Localización
 - Habitaciones
-  - Suit
+  - Suite
   - Familiar
   - Dúplex
   - Adaptada
@@ -31,7 +34,7 @@ ES :
   - Carta
   - Horarios
   - Menús
-  - Vinos	
+  - Vinos
 - Spa
   - Tratamientos
   - Masajes
@@ -40,10 +43,11 @@ ES :
   - Conciertos
 - Contacto
   - Whatsapp
-  - Email 
+  - Email
   - Redes sociales
 
-EN: 
+EN:
+
 - Main page
   - Header
     - Hotel logo
@@ -54,7 +58,7 @@ EN:
     - Awards
     - Location
 - Rooms
-  - Suit
+  - Suite
   - Family
   - Dúplex
   - Adapted
@@ -71,7 +75,7 @@ EN:
   - Menu
   - Schedules
   - Combos
-  - Wines	
+  - Wines
 - Spa
   - Treatments
   - Massage
@@ -80,5 +84,5 @@ EN:
   - Concerts
 - Contact
   - Whatsapp
-  - Email 
+  - Email
   - Social media

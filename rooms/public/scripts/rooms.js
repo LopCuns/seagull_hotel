@@ -1,6 +1,6 @@
 import '../../../public/scripts/common.js'
 import d from '../../../public/scripts/lib/DOM.js'
-import show from '../../../public/scripts/lib/show.js'
+import show from './show.js'
 
 const $show = d.id('show')
 d.ev($show, 'mousemove', (e) => show(e, 5))

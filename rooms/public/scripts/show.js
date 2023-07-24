@@ -1,5 +1,5 @@
-import d from './DOM.js'
-import { fadeIn, fadeOut } from './animations.js'
+import d from '../../../public/scripts/lib/DOM.js'
+import { fadeIn, fadeOut } from '../../../public/scripts/lib/animations.js'
 
 const $show = d.id('show')
 const $showImg = d.id('showImg')

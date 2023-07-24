@@ -45,6 +45,12 @@ ES :
   - Whatsapp
   - Email
   - Redes sociales
+- Reservar
+  - Categoría
+  - Habitación
+  - Tiempo de entrada
+  - Tiempo de salida
+  - Coste
 
 EN:
 
@@ -86,3 +92,9 @@ EN:
   - Whatsapp
   - Email
   - Social media
+- Book
+  - Category
+  - Room
+  - Arriving date
+  - Leaving date
+  - Cost

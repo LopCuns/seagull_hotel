@@ -12,4 +12,12 @@ const fadeIn = (el, options) => {
   )
 }
 
-export { fadeIn, fadeOut }
+const lighting = (el, options) => {
+  el.animate([{ opacity: 0 }, { opacity: 0.5 }, { opacity: 1 }], options)
+}
+
+const animateMultiple = (els, animation, options) => {
+  els.forEach((el) => animation(el, options))
+}
+
+export { fadeIn, fadeOut, lighting, animateMultiple }

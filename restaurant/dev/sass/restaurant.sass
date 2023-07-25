@@ -1,0 +1,111 @@
+@use '../../../dev/sass/common'
+
+body
+  background-color: common.$color-ultra-light
+
+.main
+  width: 100%
+  margin-top: 5rem
+  &__toptxt
+    @include common.flex($justify: flex-start)
+    padding: 1rem
+    margin: 2rem
+    &__desc
+      width: clamp(20rem,30rem,50vw)
+      font-size: common.$fs-big
+.slider
+  @include common.flex(column)
+  gap: 2rem
+  width: 100%
+  padding: 1rem
+  &__images
+    width: max(20rem, 70vw)
+    height: max(20rem, 35vw)
+    &__top
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__info
+    width: 100%
+    &__progress
+      @include common.flex()
+      gap: 1rem
+      width: 100%
+      &__dot
+        $dot-size: 1rem
+        width: $dot-size
+        height: $dot-size
+        border-radius: 50%
+        background-color: common.$color-light
+        transition: transform .3s, border-radius .3s
+        &.current
+          border-radius: 45%
+          transform: scaleX(1.5)
+    &__controllers
+      @include common.flex()
+      gap: 2rem
+      width: 100%
+      margin-top: 1rem
+      &__btn
+        @include common.flex()
+        $controller-size: 3rem
+        width: $controller-size
+        height: $controller-size
+        border-radius: 50%
+        background-color: common.$color-light
+        font:
+          family: common.$fm-main
+          size: common.$fs-xl
+        cursor: pointer
+        &::selection
+          display: none
+
+.menu-section
+  @include common.flex($justify: space-around, $align: flex-start)
+  &__title
+    text-align: center
+  &__menus
+    @include common.flex($direction: column)
+.menu
+  $t-duration: .3s
+  width: max(20rem,50vw)
+  &__opener
+    @include common.flex($justify: space-between)
+    padding: .5rem
+    cursor: pointer
+    background-color: common.$color-main
+    &__icon
+      $i-size: 1.5rem
+      width: $i-size
+      height: $i-size
+      transition: transform $t-duration
+  &__title
+    text-align: center
+  &__plates
+    max-height: 0
+    overflow: hidden
+    background-color: common.$color-light
+    transition: max-height $t-duration
+    &__plate
+      @include common.flex($justify: space-between)
+      padding: .5rem
+      color: common.$color-black
+      &__name
+        max-width: 80%
+      &__price
+        font-size: common.$fs-big
+.expanded-plate
+  max-height: 100vh
+.expanded-icon
+  transform: rotate(180deg)
+.schedule
+  width: max(30vw, 20rem)
+  margin: 5rem auto
+  &__title
+    text-align: center
+  &__day
+    @include common.flex($justify: space-around)
+    font-size: common.$fs-big
+@media screen and (min-width: common.$s-desktop)
+  .main__toptxt
+    justify-content: space-around

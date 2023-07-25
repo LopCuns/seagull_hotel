@@ -1,8 +1,11 @@
 const fadeOut = (el, options) => {
+  if (!el) return
   el.animate([{ opacity: 1 }, { opacity: 0.5 }], options)
 }
 
 const fadeIn = (el, options) => {
+  if (!el) return
+
   el.animate(
     [
       { opacity: 0.5, transform: 'scale(1.2)' },
@@ -13,6 +16,8 @@ const fadeIn = (el, options) => {
 }
 
 const lighting = (el, options) => {
+  if (!el) return
+
   el.animate([{ opacity: 0 }, { opacity: 0.5 }, { opacity: 1 }], options)
 }
 

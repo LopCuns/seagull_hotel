@@ -32,9 +32,10 @@ ES :
   - Francés
 - Restaurante
   - Carta
+    - Platos
+    - Menús
+    - Vinos
   - Horarios
-  - Menús
-  - Vinos
 - Spa
   - Tratamientos
   - Masajes
@@ -79,9 +80,10 @@ EN:
   - French
 - Restaurant
   - Menu
+    - Plates
+    - Combos
+    - Wines
   - Schedules
-  - Combos
-  - Wines
 - Spa
   - Treatments
   - Massage

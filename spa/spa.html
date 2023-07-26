@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Si el ESPACIO es lo que te falta, no te preocupes porque en Seagull hotel TENEMOS LA SOLUCIÓN.Ya sabes que dos es mayor que uno y que dos pisos son más que uno, nosotros también, y es por eso que te ofrecemos NUESTROS DÚPLEX.¡Échales un vistazo!">
+  <meta name="description" content="¿Qué hay MÁS RELAJANTE que un spa? el ¡SEAGULL HOTEL SPA!.BAÑOS DE AGUA CALIENTE para cuidar la piel así como TRATAMIENTOS PERSONALIZADOS para cuidar de tú cuerpo incluso cuando estás de vacaciones.">
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -25,9 +25,15 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/public/styles/common.css">
-  <link rel="stylesheet" href="../public/styles/room.css">
-  <title>Familiares</title>
+  <link rel="preload" as="image" href="public/assets/spa-vertical-1.webp">
+  <link rel="preload" as="image" href="public/assets/spa-vertical-2.webp">
+  <link rel="preload" as="image" href="public/assets/spa-wide-top.webp">
+  <link rel="preload" as="image" href="public/assets/spa-wide-fixed.webp">
+  <link rel="preload" as="style" href="../public/styles/common.css">
+  <link rel="preload" as="style" href="public/styles/spa.css">
+  <link rel="stylesheet" href="../public/styles/common.css">
+  <link rel="stylesheet" href="public/styles/spa.css">
+  <title>Spa</title>
 </head>
 <body>
   <header class="header">
@@ -36,6 +42,7 @@
         src="/assets/logo/seagull_logo.webp"
         alt="logo"
         class="header__logo logo"
+        width="7rem"
       >
       <div class="openmenu" id="openmenu">
         <div class="openmenu__bar"></div>
@@ -49,16 +56,13 @@
             <a href="/index.html" class="navbar__ul__li__a">Página principal</a>
           </li>
           <li class="navbar__ul__li menu-item">
-            <a href="../rooms-home.html" class="navbar__ul__li__a">Otras habitaciones</a>
+            <a href="/rooms/rooms-home.html" class="navbar__ul__li__a">Habitaciones</a>
           </li>
           <li class="navbar__ul__li menu-item">
             <a href="/facilities/facilities.html" class="navbar__ul__li__a">Instalaciones</a>
           </li>
           <li class="navbar__ul__li menu-item">
             <a href="/restaurant/restaurant.html" class="navbar__ul__li__a">Restaurante</a>
-          </li>
-          <li class="navbar__ul__li menu-item">
-            <a href="/spa/spa.html" class="navbar__ul__li__a">Spa</a>
           </li>
           <li class="navbar__ul__li menu-item">
             <a href="#" class="navbar__ul__li__a">Eventos</a>
@@ -103,55 +107,28 @@
       </div>
     </div>
   </header>
-  <main class="main" id="main">
-    <h1 class="title main__title">Nuestros dúplex</h1>
-    <div class="section-separator">
-      <div class="section-separator__bar"></div>
-      <img
-        src="/assets/logo/seagull__symbol.webp"
-        alt="seagull"
-        class="section-separator__img icon"
-      >
-      <div class="section-separator__bar"></div>
-    </div>
-    <section class="main__intro">
-      <h2 class="main__intro__title section-title">¿Cómo son por dentro?</h2>
-      <div class="main__intro__img-wrapper">
-        <img class="main__intro__img" src="./assets/duplex-bed.webp" alt="duplex bed">
-        <img class="main__intro__img" src="./assets/duplex-kitchen.webp" alt="duplex kitchen">
+  <main id="main" class="main">
+    <section class="main__section main__top">
+      <img src="public/assets/spa-wide-top.webp" alt="spa sauna" class="main__top__img main__section__img" width="25rem">
+      <div class="main__section__txt text-normal">
+        <h1 class="main__section__txt__title title">Seagull spa</h1>
+        <p class="main__section__txt__content">Un lugar <span class="text-highlight">relajante y calmado</span> donde olvidarte de todo lo demás y <span class="text-highlight">experimentar la paz interior</span>.</p>
       </div>
     </section>
-    <div class="section-separator">
-      <div class="section-separator__bar"></div>
-      <img
-        src="/assets/logo/seagull__symbol.webp"
-        alt="seagull"
-        class="section-separator__img icon"
-      >
-      <div class="section-separator__bar"></div>
-    </div>
-    <section class="main__offers">
-      <h2 class="main__offers__title section-title">Elije el que más te guste</h2>
-      <div class="main__offers__show" id="show">
-        <img src="./assets/duplex-country.webp" alt="suite show" class="main__offers__show__img" id="showImg">
-        <div class="main__offers__show__selection" id="showSelection">
-          <div class="main__offers__show__selection__option-wrapper">
-            <p data-img="./assets/duplex-country.webp" class="main__offers__show__selection__option show-option highlight">Duplex country</p>
-            <img src="./assets/duplex-country.webp" alt="classical suite" class="main__offers__show__selection__option-img">
-          </div>
-          <div class="main__offers__show__selection__option-wrapper">
-            <p data-img="./assets/duplex-minimalist.webp" class="main__offers__show__selection__option show-option">Duplex minimalist</p>
-            <img src="./assets/duplex-minimalist.webp" alt="couple suite" class="main__offers__show__selection__option-img">
-          </div>
-          <div class="main__offers__show__selection__option-wrapper">
-            <p data-img="./assets/duplex.webp" class="main__offers__show__selection__option show-option">Duplex modern</p>
-            <img src="./assets/duplex.webp" alt="library suite" class="main__offers__show__selection__option-img">
-          </div>
-          <div class="main__offers__show__selection__option-wrapper">
-            <p data-img="./assets/duplex-whitehouse.webp" class="main__offers__show__selection__option show-option">Duplex whitehouse</p>
-            <img src="./assets/duplex-whitehouse.webp" alt="business suite" class="main__offers__show__selection__option-img">
-          </div>
-        </div>
+    <section class="main__section main__mid">
+      <div class="main__section__txt text-normal">
+        <h2 class="main__section__txt__title title">Instalaciones de lujo</h2>
+        <p class="main__section__txt__content"><span class="text-highlight">Velas aromáticas, piscinas de agua caliente</span> y mucho más que podrás encontrar en nuestro spa para hacerlo <span class="text-highlight">tuyo</span> muy tuyo.</p>
+      </div>
+      <div class="main__mid__imgs">
+        <img src="public/assets/spa-vertical-2.webp" alt="spa pool" class="main__mid__imgs__img noresponsive mid-img-1">
+        <img src="public/assets/spa-vertical-1.webp" alt="spa candles" class="main__mid__imgs__img mid-img-2">
+      </div>
+    </section>
+    <section class="main__section main__bottom">
+      <div class="main__bottom__txt text-normal">
+        <h2 class="main__section__txt__title title">Apúntate a la relajación</h2>
+        <p class="main__section__txt__content">¿Sabías que el spa<span class="text-highlight">reduce el estrés?</span>, nosotros también, y por eso con tu estancia en Seagull hotel ¡te regalamos <span class="text-highlight">dos tratamientos</span> personalizados¡!</p>
       </div>
     </section>
   </main>
@@ -172,8 +149,9 @@
       class="footer__logo logo"
       src="/assets/logo/seagull_logo.webp"
       alt="logo"
-  >
+      width="7rem"
+    >
   </footer>
-  <script src="../public/scripts/rooms.js" type="module"></script>
+  <script src="public/scripts/spa.js" type="module"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+@use 'varsnmix' as vm
 // CSS RESET
 *,::after,::before
   box-sizing: border-box
@@ -21,35 +22,6 @@ li
   list-style: none
 img
   max-width: 100%
-// VARIABLES
-// COLORS
-$color-main: #8dd
-$color-dark: #3bc
-$color-light: #a7e7e7
-$color-ultra-light: transparentize($color-light,.8)
-$color-white: #fff
-$color-black: #000
-$color-text: #777
-$color-text-b: #444
-$color-text-l: #999
-// Z-INDEX
-$z-0: 0
-$z-1: 10
-$z-2: 20
-$z-3: 30
-$z-n: -1
-// SIZES
-$s-icon: 1.5rem
-$s-desktop: 1280px
-// FONT-SIZE
-$fs-title: min(3rem,7vw)
-$fs-subtitle: min(1.5rem,4.5vw)
-$fs-xxl: 2rem
-$fs-xl: 1.5rem
-$fs-big: 1.2rem
-// FONT-FAMILY
-$fm-main: Arial, Helvetica, sans-serif
-$fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 // UTILITY CLASSES
 .no-scroll
   overflow: hidden
@@ -57,44 +29,44 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   filter: blur(5px)
 .title
   font:
-    size: $fs-title
-    family: $fm-fancy
-  color: $color-text-b
+    size: vm.$fs-title
+    family: vm.$fm-fancy
+  color: vm.$color-text-b
 .section-title
   font:
-    family: $fm-fancy
-    size: $fs-xl
-  color: $color-text-b
+    family: vm.$fm-fancy
+    size: vm.$fs-xl
+  color: vm.$color-text-b
 .text-normal
-  font-family: $fm-main
-  color: $color-text
+  font-family: vm.$fm-main
+  color: vm.$color-text
 .text-highlight
   font:
-    family: $fm-fancy
+    family: vm.$fm-fancy
     weight: bold
     style: italic
   text-transform: uppercase
-  color: $color-text-b
+  color: vm.$color-text-b
 .icon
   display: inline-block
-  width: $s-icon
-  height: $s-icon
+  width: vm.$s-icon
+  height: vm.$s-icon
 .logo
   display: inline-block
   width: 7rem 
 .book-btn
   $bar-width: 2px
-  $bar-color: $color-dark
+  $bar-color: vm.$color-dark
   $bar-transition: transform .3s ease
   position: relative
   padding: .5rem 1rem
   border-radius: 5px
-  background: $color-dark
-  font-size: $fs-xl
-  color: $color-white
+  background: vm.$color-dark
+  font-size: vm.$fs-xl
+  color: vm.$color-white
   cursor: pointer
   &:hover
-    background-color: $color-light
+    background-color: vm.$color-light
   &:hover::after
     transform: scaleY(1) translateX(10px)
   &:hover::before
@@ -136,21 +108,14 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     width: 100%
     height: 100%
     transform: translateX(-100%)
-    background-color: $color-dark
+    background-color: vm.$color-dark
     transition: transform .2s ease
-    z-index: $z-n
+    z-index: vm.$z-n
   &:hover
-    color: $color-white
+    color: vm.$color-white
     transform: scale(1.2)
   &:hover::after
     transform: translateX(0)
-// MIXINS
-@mixin flex($direction:row,$wrap:wrap,$justify:center,$align: center)
-  display: flex
-  flex-flow: $direction $wrap
-  justify-content: $justify
-  align-items: $align
-
 
 // HEADER STYLES ( header will be displayed in every page)
 .header
@@ -159,20 +124,20 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   top:0
   width: 100%
   height: $h-height
-  background: linear-gradient(to bottom,$color-light, transparentize($color-light,.2), transparentize($color-light, .4),transparent)
-  z-index: $z-1
+  background: linear-gradient(to bottom,vm.$color-light, transparentize(vm.$color-light,.2), transparentize(vm.$color-light, .4),transparent)
+  z-index: vm.$z-1
   &__top
-    @include flex(row,wrap,space-between,center)
+    @include vm.flex(row,wrap,space-between,center)
     height: $h-height
     padding: 0 1rem
   &__content
-    @include flex(column,wrap,space-between,center)
+    @include vm.flex(column,wrap,space-between,center)
     position: absolute
     left: 0
     top: 0
     width: 70%
     height: 100vh
-    background-color: $color-ultra-light
+    background-color: vm.$color-ultra-light
     transition: transform .5s ease
     &.hidden
       transform: translateX(-100%)
@@ -180,38 +145,38 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     width: 100%
     &__ul
       width: 100%
-      @include flex($direction: row)
+      @include vm.flex($direction: row)
       margin-top: 1rem
       &__li
         flex: 1 1 0
         text-align: center
         &__btn
           font:
-            size: $fs-big
-            family: $fm-main
+            size: vm.$fs-big
+            family: vm.$fm-main
 .navbar
   width: 100%
   margin-top: 5rem
   &__ul
-    @include flex(column,wrap,center,flex-start)
+    @include vm.flex(column,wrap,center,flex-start)
     gap: 1rem
     width: 100%
     padding-left: .5rem
     &__li
       font:
-        family: $fm-fancy
+        family: vm.$fm-fancy
         size: 1.5rem
   
 .openmenu
   $w-size: 3rem
   $bar-height: 3px
-  @include flex(column)
+  @include vm.flex(column)
   width: $w-size
   height: $w-size
   &__bar
     width: 100%
     height: $bar-height
-    background-color: $color-black
+    background-color: vm.$color-black
     transition: transform .5s ease
   &__bar:nth-child(2)
     transform: scaleX(50%)
@@ -224,22 +189,22 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     transform: rotate(45deg)
   &.open > &__bar:nth-child(2)
     margin: 0
-    transform: rotate(-45deg) translateY(-$bar-height) scaleX(100%)
+    transform: rotate(-45deg) translateY($bar-height) scaleX(100%)
 
 // FOOTER STYLES
 .footer
-  @include flex($justify: space-around)
+  @include vm.flex($justify: space-around)
   margin-top: 5rem
   padding: 2rem
-  background-color: $color-ultra-light
+  background-color: vm.$color-ultra-light
   &__media
-    @include flex()
+    @include vm.flex()
     gap: 1rem
 
 // SECTION-SEPARATOR STYLES (futuramente será un web component)
 
 .section-separator
-  @include flex()
+  @include vm.flex()
   width: 100%
   padding: 1rem
   gap: 1rem
@@ -250,9 +215,9 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 // DESKTOP STYLES
 
-@media screen and (min-width: $s-desktop)
+@media screen and (min-width: vm.$s-desktop)
   .header
-    @include flex($justify: space-between)
+    @include vm.flex($justify: space-between)
     &__content
       background: none
       height: auto
@@ -261,7 +226,7 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
       &.hidden
         transform: none
     &__side
-      @include flex()
+      @include vm.flex()
       gap: 1rem
       width: auto
       &__ul

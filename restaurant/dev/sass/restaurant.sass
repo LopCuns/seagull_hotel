@@ -1,20 +1,20 @@
-@use '../../../dev/sass/common'
+@use '../../../dev/sass/varsnmix' as vm
 
 body
-  background-color: common.$color-ultra-light
+  background-color: vm.$color-ultra-light
 
 .main
   width: 100%
   margin-top: 5rem
   &__toptxt
-    @include common.flex($justify: flex-start)
+    @include vm.flex($justify: flex-start)
     padding: 1rem
     margin: 2rem
     &__desc
       width: clamp(20rem,30rem,50vw)
-      font-size: common.$fs-big
+      font-size: vm.$fs-big
 .slider
-  @include common.flex(column)
+  @include vm.flex(column)
   gap: 2rem
   width: 100%
   padding: 1rem
@@ -28,7 +28,7 @@ body
   &__info
     width: 100%
     &__progress
-      @include common.flex()
+      @include vm.flex()
       gap: 1rem
       width: 100%
       &__dot
@@ -36,44 +36,44 @@ body
         width: $dot-size
         height: $dot-size
         border-radius: 50%
-        background-color: common.$color-light
+        background-color: vm.$color-light
         transition: transform .3s, border-radius .3s
         &.current
           border-radius: 45%
           transform: scaleX(1.5)
     &__controllers
-      @include common.flex()
+      @include vm.flex()
       gap: 2rem
       width: 100%
       margin-top: 1rem
       &__btn
-        @include common.flex()
+        @include vm.flex()
         $controller-size: 3rem
         width: $controller-size
         height: $controller-size
         border-radius: 50%
-        background-color: common.$color-light
+        background-color: vm.$color-light
         font:
-          family: common.$fm-main
-          size: common.$fs-xl
+          family: vm.$fm-main
+          size: vm.$fs-xl
         cursor: pointer
         &::selection
           display: none
 
 .menu-section
-  @include common.flex($justify: space-around, $align: flex-start)
+  @include vm.flex($justify: space-around, $align: flex-start)
   &__title
     text-align: center
   &__menus
-    @include common.flex($direction: column)
+    @include vm.flex($direction: column)
 .menu
   $t-duration: .3s
   width: max(20rem,50vw)
   &__opener
-    @include common.flex($justify: space-between)
+    @include vm.flex($justify: space-between)
     padding: .5rem
     cursor: pointer
-    background-color: common.$color-main
+    background-color: vm.$color-main
     &__icon
       $i-size: 1.5rem
       width: $i-size
@@ -84,16 +84,16 @@ body
   &__plates
     max-height: 0
     overflow: hidden
-    background-color: common.$color-light
+    background-color: vm.$color-light
     transition: max-height $t-duration
     &__plate
-      @include common.flex($justify: space-between)
+      @include vm.flex($justify: space-between)
       padding: .5rem
-      color: common.$color-black
+      color: vm.$color-black
       &__name
         max-width: 80%
       &__price
-        font-size: common.$fs-big
+        font-size: vm.$fs-big
 .expanded-plate
   max-height: 100vh
 .expanded-icon
@@ -104,8 +104,8 @@ body
   &__title
     text-align: center
   &__day
-    @include common.flex($justify: space-around)
-    font-size: common.$fs-big
-@media screen and (min-width: common.$s-desktop)
+    @include vm.flex($justify: space-around)
+    font-size: vm.$fs-big
+@media screen and (min-width: vm.$s-desktop)
   .main__toptxt
     justify-content: space-around

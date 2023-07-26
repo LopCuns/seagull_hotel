@@ -1,7 +1,7 @@
-@use '../../../dev/sass/common'
+@use '../../../dev/sass/varsnmix' as vm
 
 body
-  background-color: common.$color-ultra-light
+  background-color: vm.$color-ultra-light
 
 .main
   width: 100%
@@ -11,7 +11,7 @@ body
 .slider
   $spacing: 2rem
   $s-height:  max(20rem, 30vw)
-  @include common.flex($justify: space-around)
+  @include vm.flex($justify: space-around)
   gap: 1rem
   width: 100%
   &__images
@@ -42,7 +42,7 @@ body
       &__title
         text-align: center
     &__progress
-      @include common.flex()
+      @include vm.flex()
       gap: 1rem
       width: 100%
       &__dot
@@ -50,25 +50,25 @@ body
         width: $dot-size
         height: $dot-size
         border-radius: 50%
-        background-color: common.$color-light
+        background-color: vm.$color-light
         transition: transform .3s, border-radius .3s
         &.current
           border-radius: 45%
           transform: scaleX(1.5)
     &__controllers
-      @include common.flex($justify: space-evenly)
+      @include vm.flex($justify: space-evenly)
       width: 100%
       margin-top: 1rem
       &__btn
-        @include common.flex()
+        @include vm.flex()
         $controller-size: 3rem
         width: $controller-size
         height: $controller-size
         border-radius: 50%
-        background-color: common.$color-light
+        background-color: vm.$color-light
         font:
-          family: common.$fm-main
-          size: common.$fs-xl
+          family: vm.$fm-main
+          size: vm.$fs-xl
         cursor: pointer
         &::selection
           display: none

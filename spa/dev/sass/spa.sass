@@ -1,0 +1,68 @@
+@use '../../../dev/sass/varsnmix' as vm
+
+body
+  background-color: vm.$color-ultra-light
+
+$spacing: 2rem
+
+.main
+  width: 100%
+  &__section
+    $m-width: 25rem
+    @include vm.flex()
+    width: 100%
+    margin-top: 5rem
+    background-color: vm.$color-light
+    &__img
+      flex: 1 1 0
+      min-width: $m-width
+    &__txt
+      padding: max(2rem,5vw)
+      flex: 1 1 0
+      min-width: $m-width
+  
+.main__top__img
+  max-height: 30rem
+
+.main__mid
+  padding: 2rem
+$img-h: 35rem
+
+
+.main__bottom
+  @include vm.flex($justify: center)
+  background: url('../assets/spa-wide-fixed.webp') no-repeat
+  background-size: cover
+  background-attachment: fixed
+  height: 30rem
+  &__txt
+    width: min(40rem,90vw)
+    padding: $spacing
+    color: vm.$color-white
+    background-color: vm.$color-dark
+
+.noresponsive
+  display: none
+@media screen and (min-width: vm.$s-desktop)
+  .noresponsive
+    display: inline-block
+  .main__mid
+    position: relative
+    &__imgs
+      @include vm.flex()
+      gap: $spacing * 2
+      &__img
+        max-width: 25rem
+        max-height: $img-h
+
+  .mid-img-1
+    align-self: flex-end
+  .mid-img-2
+    position: relative
+    top: -10rem
+    right: $spacing
+    align-self: flex-start
+  .main__bottom
+    padding-right: 5rem
+    justify-content: flex-end
+    

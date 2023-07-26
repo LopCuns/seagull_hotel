@@ -1,33 +1,34 @@
-@use '../../../dev/sass/common'
+@use '../../../dev/sass/varsnmix' as vm
 
 body
-  background-color: common.$color-ultra-light
+  background-color: vm.$color-ultra-light
 .main
   margin-top: 5rem
   &__title
     text-align: center
 .rooms
   $spacing : 1rem
-  @include common.flex(row)
+  @include vm.flex(row)
   gap: $spacing
   width: 100%
   padding: $spacing
   &__title
     width: 100%
+    text-align: center
   &__type
-    @include common.flex(column)
+    @include vm.flex(column)
     gap: $spacing
     padding: $spacing
     &__content
-      @include common.flex(column)
+      @include vm.flex(column)
       flex: 1 1 0
       gap: $spacing
     &__desc
       padding: 0 1rem
     &__name
       font: 
-        family: common.$fm-fancy
-        size: common.$fs-xl
+        family: vm.$fm-fancy
+        size: vm.$fs-xl
       text-align: center
     &__img
       width: max(30vw,20rem)

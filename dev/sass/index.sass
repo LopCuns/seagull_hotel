@@ -1,10 +1,10 @@
-@use 'common'
+@use 'varsnmix' as vm
 
 // HERO VIDEO STYLES
 $desktop-herovid-height:100vh
 $mobile-herovid-height: 20rem
 .herovid
-  @include common.flex()
+  @include vm.flex()
   position: relative
   height: $mobile-herovid-height
   &__video
@@ -13,29 +13,29 @@ $mobile-herovid-height: 20rem
     width: 100%
     height: $mobile-herovid-height
     object-fit: cover
-    z-index: common.$z-n
+    z-index: vm.$z-n
   &__text
     text-align: center
     font:
       weight: bold
-      family: common.$fm-main
-    color: common.$color-white
+      family: vm.$fm-main
+    color: vm.$color-white
     text-shadow: 2px 0px 2px #000
     &__title
-      font-size: common.$fs-title
+      font-size: vm.$fs-title
     &__subtitle
-      font-size: common.$fs-subtitle
+      font-size: vm.$fs-subtitle
   
     
 // MAIN SECTIONS STYLES
 .main__sections
-  @include common.flex(column)
+  @include vm.flex(column)
   gap: 1rem
 .main__section
   width: 100%
-  background-color: common.$color-ultra-light
+  background-color: vm.$color-ultra-light
   &__content
-    @include common.flex(column)
+    @include vm.flex(column)
     &__desc
       padding: 2rem
       text-align: justify
@@ -48,12 +48,12 @@ $mobile-herovid-height: 20rem
 
 // DESKTOP STYLES
 
-@media screen and (min-width: common.$s-desktop)
+@media screen and (min-width: vm.$s-desktop)
   .herovid, .herovid__video
     height: $desktop-herovid-height
   .main
     &__section
-      @include common.flex()
+      @include vm.flex()
       &__content
         flex: 1 1 0
       &__img

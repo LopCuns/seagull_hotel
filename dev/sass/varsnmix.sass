@@ -1,0 +1,35 @@
+// VARIABLES
+// COLORS
+$color-main: #8dd
+$color-dark: #3bc
+$color-light: #a7e7e7
+$color-ultra-light: transparentize($color-light,.8)
+$color-white: #fff
+$color-black: #000
+$color-text: #777
+$color-text-b: #444
+$color-text-l: #999
+// Z-INDEX
+$z-0: 0
+$z-1: 10
+$z-2: 20
+$z-3: 30
+$z-n: -1
+// SIZES
+$s-icon: 1.5rem
+$s-desktop: 1280px
+// FONT-SIZE
+$fs-title: min(3rem,7vw)
+$fs-subtitle: min(1.5rem,4.5vw)
+$fs-xxl: 2rem
+$fs-xl: 1.5rem
+$fs-big: 1.2rem
+// FONT-FAMILY
+$fm-main: Arial, Helvetica, sans-serif
+$fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+//MXINS
+@mixin flex($direction: row,$wrap: wrap,$justify: center,$align: center)
+  display: flex
+  flex-flow: $direction $wrap
+  justify-content: $justify
+  align-items:$align

@@ -15,3 +15,17 @@ const openCloseMenu = () => {
   ])
 }
 d.ev($openmenu, 'click', openCloseMenu)
+
+const ANIMTION_SELECTORS = ['.showUp', '.curtain']
+
+const showAnimation = (entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return
+    const $element = entry.target
+    // Add the animation to the element
+    d.addClass($element, 'animated')
+  })
+}
+
+const animationObserver = new IntersectionObserver(showAnimation, { threshold: 0.75 })
+d.$$(ANIMTION_SELECTORS.join(',')).forEach(el => animationObserver.observe(el))

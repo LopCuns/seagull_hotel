@@ -7,3 +7,5 @@ d.ev($show, 'mousemove', (e) => show(e, 5))
 d.ev($show, 'mouseenter', () =>
   d.setCustomProperty('--selection_transform', '0px')
 )
+
+d.ev($show, 'click', () => d.$('.highlight').click())

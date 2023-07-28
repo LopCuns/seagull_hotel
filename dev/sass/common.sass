@@ -8,7 +8,7 @@ body
   margin: 0
 h1,h2,h3,h4,h5,h6
   margin: 0
-button
+button, input, select
   border: none
   background: none
 a
@@ -22,6 +22,10 @@ li
   list-style: none
 img
   max-width: 100%
+fieldset
+  border: none
+  margin: 0
+  padding: 0
 // UTILITY CLASSES
 .no-scroll
   overflow: hidden
@@ -60,11 +64,15 @@ img
   $bar-color: vm.$color-dark
   $bar-transition: transform .3s ease
   position: relative
+  display: block
+  width: 12rem
+  margin: 5rem auto
   padding: .5rem 1rem
   border-radius: 5px
-  background: vm.$color-dark
+  text-align: center
   font-size: vm.$fs-xl
   color: vm.$color-white
+  background: vm.$color-dark
   cursor: pointer
   &:hover
     background-color: vm.$color-light

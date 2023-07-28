@@ -29,6 +29,7 @@
     &__show
       position: relative
       overflow: hidden
+      cursor: pointer
       &__img
         display: none
         width: 50rem
@@ -36,6 +37,7 @@
         object-fit: cover
       &__selection
         @include vm.flex($direction: column,$justify: space-between)
+        gap: 2rem
         position: static
         top: 0
         right: 2rem
@@ -46,15 +48,20 @@
           font:
             family: vm.$fm-fancy
             size: vm.$fs-xxl
+          background: none
+          text-decoration: underline
           color: vm.$color-text-l
 @media screen and (min-width: vm.$s-desktop)
   .main__offers__show__img
     display: block
   .main__offers__show__selection
     position: absolute
+    gap: 0
     transform: translateY(var(--selection_transform))
-  .main__offers__show__selection__option-img
-    display: none
+    &__option
+      text-decoration: none
+    &__option-img
+      display: none
   .show-option
     transition: transform .3s , color .3s
   .show-option.highlight

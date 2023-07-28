@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Haz tu reserva en Seagull hotel y comienza tus vacaciones DE LA MEJOR MANERA.">
+  <link rel="preload" as="style" href="public/styles/reservation.css">
+  <link rel="preload" as="style" href="../public/styles/common.css">
+  <link rel="stylesheet" href="public/styles/reservation.css">
+  <link rel="stylesheet" href="../public/styles/common.css">
+  <title>Reservation</title>
+</head>
+<body>
+  <h1 class="title reservation-title">¡Haz tu reserva!</h1>
+  <form class="form" id="form">
+    <fieldset class="form__fieldset">
+      <div class="form__select-wrapper" data-label="Tipo de habitación">
+        <select id="roomType" name="room-type" class="form__select text-highlight input-rounded" required>
+          <option value="Suite" class="form__select__option">Suite</option>
+          <option value="Family" class="form__select__option">Familiar</option>
+          <option value="Duplex" class="form__select__option">Duplex</option>
+          <option value="Adapted" class="form__select__option">Adaptada</option>
+        </select>
+      </div>
+      <div class="form__select-wrapper" data-label="Habitación">
+        <select name="room-name" id="roomName" class="form__select text-highlight input-rounded" required>
+          <option value="Classical" class="form__select__option">Classical</option>
+          <option value="Couple" class="form__select__option">Couple</option>
+          <option value="Library" class="form__select__option">Library</option>
+          <option value="Business" class="form__select__option">Business</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <div data-label="Email" class="form__input">
+        <input type="email" name="guest-mail" id="guestMain" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  class="form__mail input-rounded" placeholder="Dirección de correo electrónico..." required>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <div class="form__date-wrapper" data-label="Fecha de llegada">
+        <input type="date" name="init-date" class="form__date text-highlight input-rounded" required>
+      </div>
+      <div class="form__date-wrapper" data-label="Fecha de salida">
+        <input type="date" name="end-date" class="form__date text-highlight input-rounded" data-label="Fecha de salida" required>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset">
+      <a href="/index.html" class="form__back">Volver a la página principal</a>
+      <input type="submit" value="Reservar" class="form__submit text-highlight input-rounded">
+    </fieldset>
+  </form>
+  <footer class="footer" id="footer">
+    <ul class="footer__media">
+      <li class="footer__media__platform">
+        <a href="#" class="footer__media__platform__a">
+          <img src="/assets/media/gmail.webp" alt="email" class="icon">
+        </a>
+      </li>
+      <li class="footer__media__platform">
+        <a href="#" class="footer__media__platform__a">
+          <img src="/assets/media/github.webp" alt="github" class="icon">
+        </a>
+      </li>
+    </ul>
+    <img
+      class="footer__logo logo"
+      src="/assets/logo/seagull_logo.webp"
+      alt="logo"
+  >
+  </footer>
+  <script src="public/scripts/reservation.js" type="module"></script>
+</body>
+</html>

@@ -32,6 +32,7 @@ const d = {
   setAttr: (el, attr, val) => {
     if (!el) return
     el.setAttribute(attr, val)
+    return el
   },
   hasClass: (el, className) => el.classList.contains(className),
   replaceClass: (el, rmClass, newClass) => {
@@ -53,6 +54,7 @@ const d = {
   prepend: (node, parent = document) => {
     parent.prepend(node)
     return node
-  }
+  },
+  el: (tag) => document.createElement(tag)
 }
 export default d

@@ -33,6 +33,26 @@ const d = {
     if (!el) return
     el.setAttribute(attr, val)
   },
-  hasClass: (el, className) => el.classList.contains(className)
+  hasClass: (el, className) => el.classList.contains(className),
+  replaceClass: (el, rmClass, newClass) => {
+    // Create an outer array, flat it and spread its content
+    // This was made to allow either strings (one class) and arrays (multiple classes) as arguments.
+    // With a string:
+    // string is placed inside an array, this array is flatted(won't do anything because it's already flat) and spread operator unpacks the string.
+    // With an array:
+    // The array is placed inside an outer array, which is flatted getting the initial array, and spread operator unpacks its values.
+    el.classList.remove(...[rmClass].flat())
+    el.classList.add(...[newClass].flat())
+    return el
+  },
+  rmev: (el, evType, fn) => el.removeEventListener(evType, fn),
+  append: (node, parent = document) => {
+    parent.appendChild(node)
+    return node
+  },
+  prepend: (node, parent = document) => {
+    parent.prepend(node)
+    return node
+  }
 }
 export default d

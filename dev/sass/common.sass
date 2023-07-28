@@ -27,6 +27,7 @@ img
   overflow: hidden
 .blurred
   filter: blur(5px)
+  pointer-events: none
 .title
   font:
     size: vm.$fs-title
@@ -116,7 +117,10 @@ img
     transform: scale(1.2)
   &:hover::after
     transform: translateX(0)
-
+.grab
+  cursor: grab
+.grabbing
+  cursor: grabbing
 // HEADER STYLES ( header will be displayed in every page)
 .header
   $h-height: 4rem
@@ -131,7 +135,7 @@ img
     height: $h-height
     padding: 0 1rem
   &__content
-    @include vm.flex(column,wrap,space-between,center)
+    @include vm.flex(column,nowrap,space-between,center)
     position: absolute
     left: 0
     top: 0
@@ -146,7 +150,6 @@ img
     &__ul
       width: 100%
       @include vm.flex($direction: row)
-      margin-top: 1rem
       &__li
         flex: 1 1 0
         text-align: center
@@ -159,7 +162,6 @@ img
   margin-top: 5rem
   &__ul
     @include vm.flex(column,wrap,center,flex-start)
-    gap: 1rem
     width: 100%
     padding-left: .5rem
     &__li
@@ -189,7 +191,7 @@ img
     transform: rotate(45deg)
   &.open > &__bar:nth-child(2)
     margin: 0
-    transform: rotate(-45deg) translateY($bar-height) scaleX(100%)
+    transform: rotate(-45deg) translateY(-$bar-height) scaleX(100%)
 
 // FOOTER STYLES
 .footer

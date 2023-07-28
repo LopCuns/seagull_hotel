@@ -33,3 +33,15 @@ $fm-fancy: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   flex-flow: $direction $wrap
   justify-content: $justify
   align-items:$align
+
+@mixin showup($transY:0, $trans: '')
+  $animationDuration: .3s
+  opacity: 0
+  transform: translateY(calc($transY + 3rem)) $trans
+  transition: opacity $animationDuration, transform $animationDuration
+  &.animated
+    opacity: 1
+    transform: translateY($transY) $trans
+@mixin noselection()
+  &::selection
+    display: none

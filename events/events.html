@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="No sólo te damos la habitación ideal para vivir tus vacaciones AL MÁXIMO, sino que además te proporcionamos INSTALACIONES INCREÍBLES para que Seagull hotel sea tuyo muy tuyo.GIMNASIO,PISTAS DE PADEL,SPA y mucho más que descubrirás muy pronto.">
+  <meta name="description" content="Si tienes que celebrar alguún EVENTO, nosotros te ofrecemos el AMBIENTE PERFECTO para llevarlos a cabo.REUNIONES,CONFERENCIAS Y CONCIERTOS pueden ser alojados en nuestras instalaciones para crear un MOMENTO INOLVIDABLE.">
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -25,9 +25,15 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" as="image" href="./public/assets/concert-1.webp">
+  <link rel="preload" as="image" href="./public/assets/conference-1.webp">
+  <link rel="preload" as="image" href="./public/assets/meeting-1.webp">
+  <link rel="preload" as="style" href="../public/styles/common.css">
+  <link rel="preload" as="style" href="public/styles/events.css">
   <link rel="stylesheet" href="../public/styles/common.css">
-  <link rel="stylesheet" href="public/styles/facilities.css">
-  <title>Instalaciones</title>
+  <link rel="stylesheet" href="public/styles/events.css">
+  <title>Eventos</title>
 </head>
 <body>
   <header class="header">
@@ -52,13 +58,13 @@
             <a href="/rooms/rooms-home.html" class="navbar__ul__li__a">Habitaciones</a>
           </li>
           <li class="navbar__ul__li menu-item">
+            <a href="/facilities/facilities.html" class="navbar__ul__li__a">Instalaciones</a>
+          </li>
+          <li class="navbar__ul__li menu-item">
             <a href="/restaurant/restaurant.html" class="navbar__ul__li__a">Restaurante</a>
           </li>
           <li class="navbar__ul__li menu-item">
             <a href="/spa/spa.html" class="navbar__ul__li__a">Spa</a>
-          </li>
-          <li class="navbar__ul__li menu-item">
-            <a href="/events/events.html" class="navbar__ul__li__a">Eventos</a>
           </li>
         </ul>
       </nav>
@@ -100,30 +106,38 @@
       </div>
     </div>
   </header>
-  <main class="main" id="main">
-    <h1 class="main__title title showUp">Las mejores instalaciones</h1>
-    <article class="slider" data-sliderindex="0" id="slider">
-        <div class="slider__images">
-          <img class="slider__images__top" src="public/assets/padel-top.webp" alt="facility top image" draggable="false" id="sliderTopImg">
-          <img class="slider__images__sub" src="public/assets/padel-sub.webp" alt="facility sub image" draggable="false" id="sliderSubImg">
-        </div>
-      <div class="slider__info">
-        <div class="slider__info__text showUp">
-          <h2 class="slider__info__text__title section-title" id="sliderTitle">Pistas de padel</h2>
-          <p class="slider__info__text__desc text-normal" id="sliderDesc">¿Te apetece un poquito de deporte? Disfruta del padel en nuestras pistas y métele un punto a tus vacaciones.</p>
-        </div>
-        <div class="slider__info__progress" id="sliderProgress">
-          <div class="slider__info__progress__dot current"></div>
-          <div class="slider__info__progress__dot"></div>
-          <div class="slider__info__progress__dot"></div>
-          <div class="slider__info__progress__dot"></div>
-        </div>
-        <div class="slider__info__controllers" id="sliderControllers">
-          <div class="slider__info__controllers__btn" data-changeslide="prev"><</div>
-          <div class="slider__info__controllers__btn" data-changeslide="next">></div>
-        </div>
+  <main id="main" class="main">
+    <section class="images">
+      <h1 class="images__title title showUp">Eventos</h1>
+      <div class="images__image meeting-1">
+        <img src="public/assets/meeting-1.webp" alt="meeting image" class="meeting-1__img images__image__element" draggable="false">
       </div>
-    </article>
+      <div class="images__image conference-1">
+        <img src="public/assets/conference-1.webp" alt="meeting image" class="conference-1__img images__image__element"  draggable="false">
+      </div>
+      <div class="images__image concert-1">
+        <img src="public/assets/concert-1.webp" alt="meeting image" class="concert-1__img images__image__element"  draggable="false">
+      </div>
+    </section>
+    <section class="text-section text-normal showUp">
+      <h2 class="text-section__title title">Conferencias,Reuniones y Conciertos</h2>
+      <p class="text-section__content">
+        En Seagull hotel te proporcionamos las <span class="text-highlight">salas de conferencias</span> que necesitas para dar una sensación <span class="text-highlight">transformadora</span> a tus oyentes.
+        <br>
+        También disponemos de <span class="text-highlight">salas de reunión</span> para que tus meetings sean productivos.
+        <br>
+        Y por si fuera poco, también alojamos conciertos en <span class="text-highlight">nuestro patio</span> para <span class="text-highlight">romper la barrera</span> del sonido y de la espectación por medio de tu música
+
+      </p>
+    </section>
+    <section class="carrousel" id="carrousel">
+      <img src="public/assets/meeting-1.webp" alt="carrousel image" class="carrousel_side-novisible-left" draggable="false">
+      <img src="public/assets/concert-2.webp" alt="carrousel image" class="carrousel_side carrousel_side-left" draggable="false">
+      <img src="public/assets/conference-2.webp" alt="carrousel image" class="carrousel__main" draggable="false">
+      <img src="public/assets/meeting-2.webp" alt="carrousel image" class="carrousel_side carrousel_side-right" draggable="false">
+      <img src="public/assets/concert-1.webp" alt="carrousel image" class="carrousel_side-novisible-right" draggable="false">
+      <img src="public/assets//conference-1.webp" alt="carrousel image" class="carrousel_side-novisible-right" draggable="false">
+    </section>
   </main>
   <footer class="footer" id="footer">
     <ul class="footer__media">
@@ -144,6 +158,6 @@
       alt="logo"
     >
   </footer>
-  <script src="public/scripts/facilities.js" type="module"></script>
+  <script src="public/scripts/events.js" type="module" ></script>
 </body>
 </html>

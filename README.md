@@ -40,7 +40,8 @@ ES :
   - Tratamientos
   - Masajes
 - Eventos
-  - Business
+  - Conferencias
+  - Reuniones
   - Conciertos
 - Contacto
   - Whatsapp
@@ -88,7 +89,8 @@ EN:
   - Treatments
   - Massage
 - Events
-  - Business
+  - Conferences
+  - Meetings
   - Concerts
 - Contact
   - Whatsapp

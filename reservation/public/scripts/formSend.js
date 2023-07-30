@@ -20,6 +20,7 @@ const sendReservation = async (e) => {
     if (!ok) throw new Error(`${status} : ${content.errormsg}`)
     d.append(createPopup(content.successmsg, '#0fa', '#000'))
     $form.reset()
+    d.id('roomType').dispatchEvent(new Event('change'))
   } catch (err) {
     d.append(createPopup(err, '#f0a', '#000'))
   }

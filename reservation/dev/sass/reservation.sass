@@ -2,13 +2,27 @@
 
 body
   background-color: vm.$color-ultra-light
+  overflow-x: hidden
+
+pop-up
+  z-index: vm.$z-3
 
 .reservation-title
   text-align: center
 
+.input-rounded
+  padding: 1rem 2rem
+  border-radius: 50px
+  border: 3px solid vm.$color-dark
+  cursor: pointer
+  transition: background-color .3s, color .3s
+  &:hover
+    background-color: vm.$color-light
+    color: vm.$color-text-l
+
 .form
   display: grid
-  grid-template-columns: min(30rem, 100%)
+  grid-template-columns: min(35rem, 100%)
   grid-template-rows: repeat(3,vm.$s-fr)
   justify-content: center
   width: max(100%, 20rem)
@@ -17,8 +31,11 @@ body
     width: 100%
   &__mail
     width: 100%
+    cursor: text
   &__fieldset
-    @include vm.flex($justify: space-between)
+    @include vm.flex()
+    width: 100%
+    gap: 2rem
     padding: 2rem
   &__select-wrapper
     $arrow-size: 1rem
@@ -51,10 +68,7 @@ body
     text-decoration: underline
     color: vm.$color-dark
 
-.footer
-  position: absolute
-  bottom: 0
-  width: 100%
+
 
 [data-label]
   position: relative
@@ -67,12 +81,8 @@ body
     font-family: vm.$fm-main
     color: vm.$color-dark
 
-.input-rounded
-  padding: 1rem 2rem
-  border-radius: 50px
-  border: 3px solid vm.$color-dark
-  cursor: pointer
-  transition: background-color .3s, color .3s
-  &:hover
-    background-color: vm.$color-light
-    color: vm.$color-text-l
+
+
+@media screen and (min-width: vm.$s-desktop)
+  .form__fieldset
+    justify-content: space-between

@@ -15,33 +15,33 @@
   <form class="form" id="form">
     <fieldset class="form__fieldset">
       <div class="form__select-wrapper" data-label="Tipo de habitación">
-        <select id="roomType" name="room-type" class="form__select text-highlight input-rounded" required>
-          <option value="Suite" class="form__select__option">Suite</option>
-          <option value="Family" class="form__select__option">Familiar</option>
-          <option value="Duplex" class="form__select__option">Duplex</option>
-          <option value="Adapted" class="form__select__option">Adaptada</option>
+        <select id="roomType" name="roomType" class="form__select text-highlight input-rounded" required>
+          <option value="suite" class="form__select__option">Suite</option>
+          <option value="family" class="form__select__option">Familiar</option>
+          <option value="duplex" class="form__select__option">Duplex</option>
+          <option value="adapted" class="form__select__option">Adaptada</option>
         </select>
       </div>
       <div class="form__select-wrapper" data-label="Habitación">
-        <select name="room-name" id="roomName" class="form__select text-highlight input-rounded" required>
-          <option value="Classical" class="form__select__option">Classical</option>
-          <option value="Couple" class="form__select__option">Couple</option>
-          <option value="Library" class="form__select__option">Library</option>
-          <option value="Business" class="form__select__option">Business</option>
+        <select name="roomName" id="roomName" class="form__select text-highlight input-rounded" required>
+          <option value="classical" class="form__select__option">Classical</option>
+          <option value="couple" class="form__select__option">Couple</option>
+          <option value="library" class="form__select__option">Library</option>
+          <option value="business" class="form__select__option">Business</option>
         </select>
       </div>
     </fieldset>
     <fieldset class="form__fieldset">
       <div data-label="Email" class="form__input">
-        <input type="email" name="guest-mail" id="guestMain" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  class="form__mail input-rounded" placeholder="Dirección de correo electrónico..." required>
+        <input type="email" name="guestEmail" id="guestMain" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"  class="form__mail input-rounded" placeholder="Dirección de correo electrónico..." required>
       </div>
     </fieldset>
     <fieldset class="form__fieldset">
       <div class="form__date-wrapper" data-label="Fecha de llegada">
-        <input type="date" name="init-date" class="form__date text-highlight input-rounded" required>
+        <input type="date" name="arriveDate" class="form__date text-highlight input-rounded" required>
       </div>
       <div class="form__date-wrapper" data-label="Fecha de salida">
-        <input type="date" name="end-date" class="form__date text-highlight input-rounded" data-label="Fecha de salida" required>
+        <input type="date" name="departureDate" class="form__date text-highlight input-rounded" data-label="Fecha de salida" required>
       </div>
     </fieldset>
     <fieldset class="form__fieldset">

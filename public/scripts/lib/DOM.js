@@ -47,7 +47,7 @@ const d = {
     return el
   },
   rmev: (el, evType, fn) => el.removeEventListener(evType, fn),
-  append: (node, parent = document) => {
+  append: (node, parent = document.body) => {
     parent.appendChild(node)
     return node
   },
